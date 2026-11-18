@@ -46,11 +46,15 @@ Benchmarking is an optional downstream use. An organization could use AMES to or
 
 The work begins with the conceptual structure, before selecting a technical schema format or deriving fields from individual studies.
 
+The [conceptual model](docs/conceptual-model.md) develops the proposed hierarchy, candidate metadata, applicability and necessity rules, and open design questions. It also describes the narrative summary, Measurement Facts label, external vocabulary references, and the connection between business questions and intended actions.
+
+The model distinguishes metadata AMES can support from information needed for a particular record. AI-assisted completion should prioritize consequential gaps rather than ask contributors to fill every available field.
+
 Areas under consideration include:
 
 | Area | Information it could describe |
 | --- | --- |
-| Business question and intended decision | What the measurement was intended to inform. |
+| Business question, decision and action | The question, intended decision, contemplated actions under different findings, and stated decision criteria. |
 | Measurement scope | Advertiser, brand, product, campaign, media, population and geography. |
 | Time and duration | Relevant campaign, exposure, intervention, outcome measurement, baseline and follow-up periods; attribution or response windows; and time granularity. |
 | Method and design | How the evidence was produced, including procedures, comparisons, assumptions and method-specific details. |
@@ -86,7 +90,7 @@ Open structural questions include:
 The intended representations are:
 
 - **Machine-readable:** a structured AMES evidence object.
-- **Human-readable:** a concise “Measurement Facts” summary, analogous to a nutrition label.
+- **Human-readable:** a concise narrative answering “What am I looking at?” and a structured “Measurement Facts” label, analogous to a nutrition label. Plain-language explanations should accompany technical uncertainty measures where useful.
 - **Developer-readable:** schema definitions, documentation, examples and eventually validation and reference tools.
 
 These should derive from the same conceptual model.
@@ -97,7 +101,7 @@ A proposed workflow is:
 
 1. An analyst supplies a measurement report, API response or other evidence artifact.
 2. An AI system extracts available metadata and identifies its sources.
-3. The system flags missing or ambiguous information.
+3. The system identifies applicable metadata and prioritizes missing or ambiguous information that could materially change interpretation; it does not request every unfilled field.
 4. The analyst confirms or supplies that information.
 5. The system produces a record conforming to the eventual AMES schema.
 
