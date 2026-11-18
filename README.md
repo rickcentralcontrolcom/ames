@@ -130,6 +130,10 @@ These initiatives are identified for investigation, not as established integrati
 
 Development will proceed iteratively. Early proposals should remain clearly distinguished from accepted design decisions.
 
+## Presentations
+
+- [AMES Overview (PDF)](presentations/AMES-Overview.pdf), presented to the ARF November Attribution Working Group, November 18, 2026. The deck introduces the concept; schema examples are illustrative rather than a released specification.
+
 ## Feedback
 
 This project was initiated by Rick Bruner. Questions and proposed changes can be discussed through GitHub Issues. Early feedback on conceptual boundaries, terminology and interoperability is welcome.
